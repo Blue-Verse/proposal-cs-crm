@@ -40,8 +40,6 @@
         radial-gradient(circle at 12% 18%, rgba(14, 165, 233, 0.08), transparent 42%),
         radial-gradient(circle at 88% 82%, rgba(2, 132, 199, 0.06), transparent 48%);
     }
-
-    /* ─── doc-content typography ─── */
     .doc-content h1, .doc-content h2, .doc-content h3, .doc-content h4 {
       color: rgb(15 23 42); font-weight: 700; letter-spacing: -0.01em;
       line-height: 1.3; margin-top: 1.6em; margin-bottom: 0.7em;
@@ -90,11 +88,7 @@
       color: rgb(71 85 105); background: rgb(240 249 255);
       border-radius: 0.5rem; padding-top: 0.55rem; padding-bottom: 0.55rem;
     }
-
-    /* ─── 12pt (16px) minimum font size ─── */
     .text-xs { font-size: 1rem !important; }
-
-    /* ─── Timeline ─── */
     .timeline { position: relative; padding-left: 2rem; }
     .timeline::before {
       content: ''; position: absolute; left: 0.6rem; top: 0.25rem; bottom: 0.25rem;
@@ -106,12 +100,8 @@
       width: 0.75rem; height: 0.75rem; border-radius: 50%;
       background: rgb(2 132 199); border: 3px solid rgb(224 242 254);
     }
-
-    /* ─── Page sections ─── */
     .page-section { display: none; }
     .page-section.active { display: block; }
-
-    /* ─── Mobile sidebar toggle ─── */
     #sidebar-backdrop { display: none; }
     #sidebar-backdrop.open { display: block; }
     @media (max-width: 1023px) {
@@ -126,7 +116,6 @@
 
     <!-- ─── Header ─── -->
     <header class="mb-6 rounded-2xl border border-slate-200/70 bg-white/85 px-5 py-3 shadow-soft backdrop-blur">
-      <!-- Row 1: menu + logo (mobile & desktop) / title right-aligned on desktop -->
       <div class="flex flex-wrap items-center gap-3">
         <button id="sidebar-toggle" class="lg:hidden inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white px-3 py-1 text-sm font-medium text-slate-700 hover:border-sky-300 hover:text-sky-700">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -135,7 +124,6 @@
         <a href="#home" class="inline-flex items-center shrink-0">
           <img src="blueverse_logo_h.png" alt="Blue Verse" class="h-6" />
         </a>
-        <!-- Desktop: push to right. Mobile: hidden here, shown as row 2 below -->
         <div class="hidden sm:block ml-auto text-right">
           <p class="text-sm font-semibold tracking-[0.04em] text-sky-700/90">CS 고객 관리용 CRM 시스템 구축</p>
           <p class="text-xs text-slate-400">프로젝트 제안서</p>
@@ -148,7 +136,6 @@
       <!-- ─── Sidebar ─── -->
       <div id="sidebar-backdrop" class="fixed inset-0 bg-black/30 z-30 lg:hidden" onclick="closeSidebar()"></div>
       <aside id="sidebar" class="rounded-2xl border border-slate-200/70 bg-white/90 p-4 shadow-soft backdrop-blur lg:sticky lg:top-6 lg:h-[calc(100vh-4rem)] lg:overflow-auto">
-        <!-- sidebar nav starts directly -->
         <nav id="nav" class="space-y-1">
           <a href="#home" data-page="home" class="nav-link block rounded-xl border px-3 py-2 text-sm border-sky-200 bg-sky-50 font-medium text-sky-700">홈</a>
           <div class="my-3 border-t border-slate-200"></div>
@@ -171,11 +158,10 @@
         <!-- PAGE: Home                                      -->
         <!-- ═══════════════════════════════════════════════ -->
         <div id="page-home" class="page-section active space-y-6">
-          <!-- Hero -->
           <div class="rounded-2xl border border-slate-200/70 bg-white/95 p-6 shadow-soft backdrop-blur md:p-8">
             <p class="mb-2 text-xs font-semibold tracking-[0.2em] text-sky-700/80">프로젝트 제안서</p>
             <h1 class="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">CS 고객 관리용 CRM 시스템 구축</h1>
-            <p class="mt-3 max-w-3xl text-sm leading-7 text-slate-600 md:text-base">채널톡·배송업체(하우저) 시스템 연동을 통해 고객 상담 이력과 주문/배송 상태를 한눈에 파악할 수 있는 CS 전용 CRM을 구축합니다. 상담사 퍼포먼스 관리와 통합 고객 뷰로 CS 업무 효율을 극대화합니다.</p>
+            <p class="mt-3 max-w-3xl text-sm leading-7 text-slate-600 md:text-base">채널톡 및 하우저(배송업체) 시스템 연동을 통해 고객 상담 이력과 주문/배송 정보를 한 화면에서 통합 조회하고, 상담사 퍼포먼스 대시보드로 CS 운영 효율을 극대화하는 전용 CRM 시스템을 구축합니다.</p>
             <div class="mt-4 flex flex-wrap items-center gap-2">
               <span class="inline-flex rounded-full border border-sky-200 bg-sky-100 px-2.5 py-1 text-sm font-semibold tracking-[0.12em] text-sky-700">9,000,000원</span>
               <span class="inline-flex rounded-full border border-sky-200 bg-sky-100 px-2.5 py-1 text-sm font-semibold tracking-[0.12em] text-sky-700">90일</span>
@@ -185,7 +171,7 @@
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                 원본 공고
               </a>
-              <a href="https://www.wishket.com/partners/p/blueverse1/" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.wishket.com/partners/p/blueverse1/portfolio/" target="_blank" rel="noopener noreferrer"
                  class="inline-flex items-center gap-1 rounded-full border border-sky-200 bg-sky-50 px-2.5 py-1 text-sm font-medium text-sky-700 transition hover:border-sky-400 hover:bg-sky-100">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
                 위시켓 포트폴리오
@@ -193,7 +179,6 @@
             </div>
           </div>
 
-          <!-- Summary cards grid -->
           <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             <a href="#overview" class="group rounded-2xl border border-slate-200/70 bg-white/90 p-5 shadow-soft transition hover:-translate-y-0.5 hover:border-sky-200 hover:bg-white">
               <div class="mb-3 inline-flex rounded-full border px-2.5 py-1 text-sm font-semibold tracking-[0.12em] bg-sky-100 text-sky-700 border-sky-200">소개</div>
@@ -227,27 +212,25 @@
             </a>
           </div>
 
-          <!-- Quick stats -->
           <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
             <div class="rounded-2xl border border-slate-200/70 bg-white/90 p-4 text-center shadow-soft backdrop-blur">
-              <p class="text-2xl font-bold text-sky-700">10+</p>
-              <p class="mt-1 text-xs text-slate-500">완료 프로젝트</p>
+              <p class="text-2xl font-bold text-sky-700">13+</p>
+              <p class="text-xs text-slate-500">완료 프로젝트</p>
             </div>
             <div class="rounded-2xl border border-slate-200/70 bg-white/90 p-4 text-center shadow-soft backdrop-blur">
-              <p class="text-2xl font-bold text-sky-700">2,100+</p>
-              <p class="mt-1 text-xs text-slate-500">총 PR 수</p>
+              <p class="text-2xl font-bold text-sky-700">504</p>
+              <p class="text-xs text-slate-500">EZ-Approve PR</p>
             </div>
             <div class="rounded-2xl border border-slate-200/70 bg-white/90 p-4 text-center shadow-soft backdrop-blur">
-              <p class="text-2xl font-bold text-sky-700">100+</p>
-              <p class="mt-1 text-xs text-slate-500">구축 페이지</p>
+              <p class="text-2xl font-bold text-sky-700">12+</p>
+              <p class="text-xs text-slate-500">외부 API 연동 경험</p>
             </div>
             <div class="rounded-2xl border border-slate-200/70 bg-white/90 p-4 text-center shadow-soft backdrop-blur">
-              <p class="text-2xl font-bold text-sky-700">B2B</p>
-              <p class="mt-1 text-xs text-slate-500">SaaS 전문</p>
+              <p class="text-2xl font-bold text-sky-700">7종</p>
+              <p class="text-xs text-slate-500">RBAC 역할 관리</p>
             </div>
           </div>
 
-          <!-- CTA -->
           <div class="rounded-2xl border border-sky-200/70 bg-gradient-to-br from-sky-50 to-brand-50 p-6 text-center shadow-soft md:p-10">
             <h2 class="text-xl font-bold tracking-tight text-slate-900 md:text-2xl">함께 만들어 가겠습니다</h2>
             <p class="mx-auto mt-3 max-w-lg text-sm leading-7 text-slate-600">각 메뉴를 클릭하시면 상세 내용을 확인하실 수 있습니다.</p>
@@ -261,60 +244,60 @@
           <div class="rounded-2xl border border-slate-200/70 bg-white/95 p-5 shadow-soft backdrop-blur md:p-8">
             <article class="doc-content">
               <h1>프로젝트 소개</h1>
-              <blockquote>채널톡·배송업체(하우저) 시스템 연동을 통해 고객 상담 이력과 주문/배송 상태를 한눈에 파악할 수 있는 CS 전용 CRM을 구축합니다. 상담사 퍼포먼스 관리와 통합 고객 뷰로 CS 업무 효율을 극대화합니다.</blockquote>
+              <blockquote>채널톡 및 하우저 시스템 연동을 통해 고객 상담 이력과 주문/배송 정보를 한 화면에서 통합 조회하고, 상담사 퍼포먼스 대시보드로 CS 운영 효율을 극대화하는 전용 CRM 시스템을 구축합니다.</blockquote>
 
               <h2>프로젝트 개요</h2>
               <table>
                 <tr><th>항목</th><th>내용</th></tr>
                 <tr><td>프로젝트명</td><td><a href="https://www.wishket.com/project/153438" target="_blank" rel="noopener noreferrer" class="text-sky-700 underline decoration-sky-300 hover:decoration-sky-500">CS 고객 관리용 CRM 시스템 구축</a></td></tr>
                 <tr><td>카테고리</td><td>CRM · 고객관리 · 웹PC 프로그램</td></tr>
-                <tr><td>제안 금액</td><td>9,000,000원 (VAT 별도)</td></tr>
+                <tr><td>제안 금액</td><td>9,000,000원</td></tr>
                 <tr><td>제안 기간</td><td>90일</td></tr>
-                <tr><td>핵심 기술</td><td>Next.js 14, NestJS 10, MySQL 8, 채널톡 API, 하우저 API</td></tr>
+                <tr><td>핵심 기술</td><td>NestJS 10, Next.js 14, MUI v5, TypeORM, MySQL 8, Docker</td></tr>
               </table>
 
               <h2>핵심 요구사항 분석</h2>
               <ul>
-                <li><strong>주문 정보 관리</strong> — 배송업체(하우저) 시스템 연동, 실시간 주문 데이터 및 배송 상태 조회</li>
-                <li><strong>고객 상담 이력 관리</strong> — 채널톡 연동, 상담 내역/톡 기록 통합 조회, CS 담당자 메모 작성 기능</li>
-                <li><strong>관리자/사용자 관리</strong> — 10~20명 사내 임직원 계정 생성, 역할별 권한 부여 어드민 기능</li>
-                <li><strong>UI/UX 디자인 전담</strong> — 디자인 인력 미보유, 전체 화면 설계 및 디자인 수행 필요</li>
-                <li><strong>기획 산출물</strong> — 요구사항 정의서, 기능 정의서, 화면 설계서 납품</li>
+                <li><strong>주문 정보 관리</strong> — 하우저 시스템 API 연동으로 실시간 주문 데이터 및 배송 상태 조회, 배송 D-Day 추적</li>
+                <li><strong>고객 상담 이력 관리</strong> — 채널톡 Open API 연동으로 상담 내역 동기화, 상담 메모 작성, 상담 분류(불만/일반문의/상담중) 색상 코딩</li>
+                <li><strong>관리자/사용자 관리</strong> — 10~20명 사내 임직원 RBAC 3종 역할(슈퍼관리자, CS관리자, CS상담사)</li>
+                <li><strong>UI/UX 디자인 전담</strong> — 기획~디자인~개발~배포 올인원 수행 (클라이언트 디자인 인력 미보유)</li>
+                <li><strong>기획 산출물</strong> — 요구사항 정의서, 기능 정의서, 화면 설계서 3종 납품</li>
+                <li><strong>상담사 퍼포먼스 대시보드</strong> — 응대 건수, 처리 시간, 상태별 통계 시각화</li>
+                <li><strong>참고 이미지 분석 반영</strong> — VIP 고객 태깅, SMS/알림톡 발송, 엑셀 다운로드, 통합 검색 기능 확인</li>
               </ul>
 
               <h2>제안 포인트</h2>
-              <p>본 프로젝트의 핵심은 <strong>외부 시스템 연동(채널톡 + 하우저)</strong>과 <strong>CS 업무 최적화 UI</strong>입니다. 기존 B2B SaaS/어드민 패널 구축 경험을 바탕으로 다음과 같이 접근합니다:</p>
-              <ul>
-                <li>채널톡 Open API를 활용한 상담 이력 자동 동기화 및 실시간 웹훅 수신</li>
-                <li>하우저 API 연동으로 주문/배송 상태 실시간 조회 및 고객 프로필에 통합 표시</li>
-                <li>RBAC(역할 기반 접근 제어)로 관리자/상담사 권한 분리 — EZ-Approve에서 7종 역할 관리 경험 보유</li>
-                <li>상담사 퍼포먼스 대시보드 — 응대 건수, 평균 처리 시간, 만족도 등 핵심 지표 시각화</li>
-                <li>PC Web 기반으로 개발하여 별도 설치 없이 브라우저에서 즉시 사용 가능</li>
-                <li>유사 프로젝트 코드 재활용 및 AI 증강 개발(Google Jules, Copilot, Bolt) 활용으로 효율적 개발 진행</li>
-              </ul>
+              <ol>
+                <li><strong>채널톡 + 하우저 이중 API 연동</strong> — 상담 이력과 주문/배송 상태를 단일 고객 프로필에서 통합 조회. 참고 이미지 분석 결과, 고객 사이드바에 프로필·주문·상담 탭을 통합하는 UI 패턴 확인</li>
+                <li><strong>RBAC 기반 3종 역할 관리</strong> — EZ-Approve에서 7종 역할 관리 경험을 3종(슈퍼관리자·CS관리자·CS상담사)에 맞춤 적용</li>
+                <li><strong>상담사 퍼포먼스 대시보드</strong> — 참고 이미지의 "통합 상담 이력 조회" 화면을 기반으로 필터링, 통계, 엑셀 다운로드 기능 구현</li>
+                <li><strong>올인원 수행</strong> — 기획 문서 3종 + Figma 디자인 + 풀스택 개발 + 배포까지 단일 팀에서 일관성 있게 진행</li>
+                <li><strong>유사 프로젝트 코드 재활용</strong> — EZ-Approve(RBAC, API 연동), Harmony Link(고객 이력 통합 관리) 아키텍처를 직접 재활용하여 효율적으로 개발</li>
+              </ol>
 
               <h2>사용 기술 및 툴</h2>
               <h3>개발 기술</h3>
               <div class="flex flex-wrap gap-2 not-prose mb-4">
-                <span class="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-xs font-medium text-sky-700">Next.js 14</span>
-                <span class="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-xs font-medium text-sky-700">NestJS 10</span>
-                <span class="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-xs font-medium text-sky-700">TypeScript 5</span>
-                <span class="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-xs font-medium text-sky-700">MySQL 8</span>
-                <span class="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-xs font-medium text-sky-700">TypeORM</span>
-                <span class="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-xs font-medium text-sky-700">Redis</span>
-                <span class="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-xs font-medium text-sky-700">Docker</span>
-                <span class="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-xs font-medium text-sky-700">MUI v5</span>
-                <span class="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-xs font-medium text-sky-700">채널톡 API</span>
-                <span class="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-xs font-medium text-sky-700">하우저 API</span>
+                <span class="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-sm font-medium text-sky-700">NestJS 10</span>
+                <span class="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-sm font-medium text-sky-700">Next.js 14</span>
+                <span class="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-sm font-medium text-sky-700">TypeScript</span>
+                <span class="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-sm font-medium text-sky-700">MUI v5</span>
+                <span class="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-sm font-medium text-sky-700">React Query</span>
+                <span class="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-sm font-medium text-sky-700">TypeORM</span>
+                <span class="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-sm font-medium text-sky-700">MySQL 8</span>
+                <span class="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-sm font-medium text-sky-700">Docker</span>
+                <span class="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-sm font-medium text-sky-700">채널톡 API</span>
+                <span class="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-sm font-medium text-sky-700">하우저 API</span>
+                <span class="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-sm font-medium text-sky-700">JWT + CASL</span>
               </div>
               <h3>협업 및 커뮤니케이션</h3>
               <div class="flex flex-wrap gap-2 not-prose">
-                <span class="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-medium text-amber-700">GitHub</span>
-                <span class="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-medium text-amber-700">Slack / 카카오톡</span>
-                <span class="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-medium text-amber-700">Zoom / Google Meet</span>
-                <span class="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-medium text-amber-700">Notion</span>
-                <span class="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-medium text-amber-700">Figma</span>
-                <span class="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-medium text-amber-700">Linear</span>
+                <span class="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-sm font-medium text-amber-700">Slack / 카카오톡</span>
+                <span class="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-sm font-medium text-amber-700">Zoom / Google Meet</span>
+                <span class="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-sm font-medium text-amber-700">GitHub</span>
+                <span class="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-sm font-medium text-amber-700">Notion / Google Docs</span>
+                <span class="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-sm font-medium text-amber-700">Figma</span>
               </div>
             </article>
           </div>
@@ -327,13 +310,13 @@
           <div class="rounded-2xl border border-slate-200/70 bg-white/95 p-5 shadow-soft backdrop-blur md:p-8">
             <article class="doc-content">
               <h1>견적서</h1>
-              <blockquote>본 견적서는 프로젝트 요구사항 분석을 기반으로 산출되었습니다.</blockquote>
+              <blockquote>본 견적서는 프로젝트 요구사항 및 참고 이미지 분석을 기반으로 산출되었습니다.</blockquote>
 
               <h2>견적 요약</h2>
               <table>
                 <tr><th>항목</th><th>내용</th></tr>
                 <tr><td>프로젝트명</td><td>CS 고객 관리용 CRM 시스템 구축</td></tr>
-                <tr><td>제안 금액</td><td><strong>9,000,000원 (VAT 별도)</strong></td></tr>
+                <tr><td>제안 금액</td><td><strong>9,000,000원</strong></td></tr>
                 <tr><td>제안 기간</td><td>90일</td></tr>
                 <tr><td>견적 유효기간</td><td>제안일로부터 30일</td></tr>
               </table>
@@ -344,11 +327,12 @@
                   <tr><th>구분</th><th>항목</th><th>수량</th><th>단가</th><th>금액</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>기획</td><td>요구사항 정의, 기능 정의, 화면 설계서</td><td>1식</td><td>-</td><td>1,350,000원</td></tr>
-                  <tr><td>디자인</td><td>UI/UX 디자인 (디자인 시스템, 주요 화면)</td><td>1식</td><td>-</td><td>1,350,000원</td></tr>
-                  <tr><td>프론트엔드</td><td>CRM 대시보드, 고객 조회, 관리자 패널</td><td>1식</td><td>-</td><td>2,700,000원</td></tr>
-                  <tr><td>백엔드</td><td>API 서버, DB, 채널톡/하우저 연동</td><td>1식</td><td>-</td><td>2,700,000원</td></tr>
-                  <tr><td>QA/배포</td><td>테스트, 버그 수정, 서버 배포</td><td>1식</td><td>-</td><td>900,000원</td></tr>
+                  <tr><td>기획</td><td>요구사항 정의서, 기능 정의서, 화면 설계서</td><td>1식</td><td>-</td><td>1,200,000</td></tr>
+                  <tr><td>디자인</td><td>UI/UX 디자인 (디자인 시스템 + 12~15화면)</td><td>1식</td><td>-</td><td>1,300,000</td></tr>
+                  <tr><td>프론트엔드</td><td>CRM 대시보드, 고객 조회, 상담 이력, 주문 조회, 관리자 패널</td><td>1식</td><td>-</td><td>2,500,000</td></tr>
+                  <tr><td>백엔드</td><td>API 서버, 채널톡/하우저 연동, RBAC, 통계, 알림</td><td>1식</td><td>-</td><td>2,800,000</td></tr>
+                  <tr><td>인프라</td><td>서버/DB/Docker 구성, CI/CD</td><td>1식</td><td>-</td><td>500,000</td></tr>
+                  <tr><td>QA/배포</td><td>통합 테스트, 연동 검증, 운영 배포, 인수인계</td><td>1식</td><td>-</td><td>700,000</td></tr>
                 </tbody>
                 <tfoot>
                   <tr><th colspan="4">합계 (VAT 별도)</th><th>9,000,000원</th></tr>
@@ -357,16 +341,18 @@
 
               <h2>산정 근거</h2>
               <ul>
-                <li>클라이언트 예상 금액(10,000,000원) 대비 90% 수준으로 경쟁력 있는 금액 제시</li>
-                <li>유사 B2B 어드민 패널 구축 경험(EZ-Approve 504 PR/9주, Series B 1,652 PR/14개월)으로 코드 재활용 가능</li>
-                <li>AI 증강 개발 도구(Google Jules, Copilot, Bolt) 활용으로 개발 생산성 20~30% 향상 반영</li>
-                <li>10~20명 규모 사내 시스템으로 대규모 트래픽 설계 불필요 → 인프라 비용 절감</li>
+                <li>클라이언트 예상 금액(10,000,000원) 대비 경쟁력 있는 금액으로 산정</li>
+                <li>유사 프로젝트(EZ-Approve, Harmony Link) 실적 기반 공수 산출</li>
+                <li>참고 이미지 분석 결과 VIP 태깅, SMS 알림, 엑셀 다운로드 등 부가 기능 공수 반영</li>
+                <li>채널톡/하우저 외부 API 연동 복잡도 및 테스트 공수 별도 산정</li>
               </ul>
 
               <h2>포함 사항</h2>
               <ul>
                 <li>소스 코드 전체 이관</li>
                 <li>개발 문서 (API 명세서, DB 스키마, 배포 가이드)</li>
+                <li>기획 문서 3종 (요구사항 정의서, 기능 정의서, 화면 설계서)</li>
+                <li>Figma 디자인 원본 파일</li>
                 <li>1개월 무상 하자 보수</li>
                 <li>배포 환경 세팅 (1회)</li>
               </ul>
@@ -375,7 +361,8 @@
               <ul>
                 <li>서버 호스팅 비용 (AWS 등)</li>
                 <li>도메인 구매 비용</li>
-                <li>외부 유료 API 사용 비용 (채널톡 유료 플랜, 하우저 API 등)</li>
+                <li>채널톡 / 하우저 API 사용 비용 (클라이언트 기존 계약 활용)</li>
+                <li>SMS/알림톡 발송 비용 (통신사 과금)</li>
                 <li>하자 보수 기간 이후 유지보수</li>
               </ul>
             </article>
@@ -394,12 +381,12 @@
               <h2>공수 요약</h2>
               <table>
                 <tr><th>구분</th><th>공수 (M/D)</th><th>비율</th></tr>
-                <tr><td>기획/설계</td><td>8 M/D</td><td>19%</td></tr>
-                <tr><td>UI/UX 디자인</td><td>6 M/D</td><td>14%</td></tr>
-                <tr><td>프론트엔드</td><td>12 M/D</td><td>28%</td></tr>
-                <tr><td>백엔드 + API 연동</td><td>13 M/D</td><td>30%</td></tr>
-                <tr><td>QA/배포</td><td>4 M/D</td><td>9%</td></tr>
-                <tr><th>합계</th><th>43 M/D</th><th>100%</th></tr>
+                <tr><td>기획/설계</td><td>8 M/D</td><td>17%</td></tr>
+                <tr><td>UI/UX 디자인</td><td>7 M/D</td><td>15%</td></tr>
+                <tr><td>프론트엔드</td><td>12 M/D</td><td>26%</td></tr>
+                <tr><td>백엔드 + API 연동</td><td>14 M/D</td><td>30%</td></tr>
+                <tr><td>QA/배포</td><td>5 M/D</td><td>11%</td></tr>
+                <tr><th>합계</th><th>46 M/D</th><th>100%</th></tr>
               </table>
 
               <h2>기능별 상세 공수</h2>
@@ -411,19 +398,19 @@
                   <tr><td rowspan="3">기획/설계</td><td>요구사항 정의서 작성</td><td>기획</td><td>3</td></tr>
                   <tr><td>화면 설계서(와이어프레임)</td><td>기획</td><td>3</td></tr>
                   <tr><td>DB 스키마 및 API 명세서</td><td>설계</td><td>2</td></tr>
-                  <tr><td rowspan="2">UI/UX 디자인</td><td>디자인 시스템 구축</td><td>디자인</td><td>2</td></tr>
-                  <tr><td>주요 화면 UI 디자인 (10~15화면)</td><td>디자인</td><td>4</td></tr>
-                  <tr><td rowspan="2">사용자 인증/관리</td><td>로그인/회원관리 API + RBAC</td><td>백엔드</td><td>2</td></tr>
+                  <tr><td rowspan="2">UI/UX 디자인</td><td>디자인 시스템 구축</td><td>디자인</td><td>2.5</td></tr>
+                  <tr><td>주요 화면 UI 디자인 (12~15화면)</td><td>디자인</td><td>4.5</td></tr>
+                  <tr><td rowspan="2">사용자 인증/관리</td><td>로그인/회원관리 API + RBAC 3종</td><td>백엔드</td><td>2</td></tr>
                   <tr><td>로그인/관리자 패널 화면</td><td>프론트엔드</td><td>2</td></tr>
-                  <tr><td rowspan="2">주문 정보 관리</td><td>하우저 API 연동 (주문/배송 동기화)</td><td>백엔드</td><td>3</td></tr>
-                  <tr><td>주문/배송 조회 화면</td><td>프론트엔드</td><td>2.5</td></tr>
-                  <tr><td rowspan="2">고객 상담 이력</td><td>채널톡 API 연동 (상담이력 + 웹훅)</td><td>백엔드</td><td>3.5</td></tr>
-                  <tr><td>상담 이력 뷰 + 메모 에디터</td><td>프론트엔드</td><td>3</td></tr>
-                  <tr><td rowspan="2">대시보드</td><td>통계 API (상담사 퍼포먼스)</td><td>백엔드</td><td>2</td></tr>
-                  <tr><td>CRM 대시보드 화면</td><td>프론트엔드</td><td>2.5</td></tr>
+                  <tr><td rowspan="2">주문 정보 관리</td><td>하우저 API 연동 (주문/배송 동기화, D-Day)</td><td>백엔드</td><td>3</td></tr>
+                  <tr><td>주문/배송 조회 화면 + 상태 필터</td><td>프론트엔드</td><td>2.5</td></tr>
+                  <tr><td rowspan="2">고객 상담 이력</td><td>채널톡 API 연동 (상담이력 + 웹훅 + 알림톡)</td><td>백엔드</td><td>4</td></tr>
+                  <tr><td>상담 이력 타임라인 뷰 + 메모 에디터 + 분류 코딩</td><td>프론트엔드</td><td>3</td></tr>
+                  <tr><td rowspan="2">대시보드/통계</td><td>통계 API (상담사 퍼포먼스, 엑셀 다운로드)</td><td>백엔드</td><td>2.5</td></tr>
+                  <tr><td>CRM 대시보드 + 통합 검색 + VIP 태깅</td><td>프론트엔드</td><td>2.5</td></tr>
                   <tr><td>인프라</td><td>서버/DB/Docker 구성, CI/CD</td><td>인프라</td><td>2.5</td></tr>
-                  <tr><td rowspan="2">QA/배포</td><td>통합 테스트 및 연동 검증</td><td>QA</td><td>2.5</td></tr>
-                  <tr><td>운영 배포 및 인수인계</td><td>배포</td><td>1.5</td></tr>
+                  <tr><td rowspan="2">QA/배포</td><td>통합 테스트 및 연동 검증</td><td>QA</td><td>3</td></tr>
+                  <tr><td>운영 배포 및 인수인계</td><td>배포</td><td>2</td></tr>
                 </tbody>
               </table>
 
@@ -432,7 +419,7 @@
                 <li>1 M/D = 8시간 기준 (1인 1일 작업량)</li>
                 <li>주 5일 근무 기준</li>
                 <li>버퍼 10~15% 포함</li>
-                <li>AI 보조 개발 도구 활용으로 일반 대비 20~30% 공수 절감 반영</li>
+                <li>유사 프로젝트 수행 경험 기반 효율적 개발</li>
               </ul>
             </article>
           </div>
@@ -448,7 +435,7 @@
               <blockquote>프로젝트 요구사항을 정의하고 기능 범위를 명확히 합니다.</blockquote>
 
               <h2>1. 프로젝트 배경 및 목적</h2>
-              <p>CS 인입 고객을 효율적으로 응대하고 관리하기 위해 새로운 전용 CRM 시스템을 구축합니다. 현재 채널톡과 배송업체(하우저) 시스템이 분리되어 있어 상담사가 고객 정보를 파악하기 위해 여러 시스템을 전환해야 하는 비효율이 발생하고 있습니다.</p>
+              <p>CS 인입 고객을 효율적으로 응대하고 관리하기 위해 전용 CRM 시스템을 구축합니다. 현재 채널톡과 배송업체(하우저) 시스템이 분리되어 있어 상담사가 고객 정보를 파악하기 위해 여러 시스템을 전환해야 하는 비효율이 발생하고 있습니다.</p>
               <p><strong>목적:</strong></p>
               <ul>
                 <li>채널톡 및 하우저 시스템 연동을 통한 고객 정보 통합 뷰 제공</li>
@@ -463,9 +450,9 @@
                   <tr><th>사용자 유형</th><th>설명</th><th>주요 기능</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>슈퍼 관리자</td><td>시스템 전체 관리, 설정 변경 권한</td><td>사용자 관리, 권한 설정, 시스템 설정, 전체 대시보드</td></tr>
-                  <tr><td>CS 관리자</td><td>CS 팀 리더, 상담사 관리</td><td>상담사 퍼포먼스 조회, 상담 배정, 통계 대시보드</td></tr>
-                  <tr><td>CS 상담사</td><td>고객 응대 담당자</td><td>고객 조회, 상담 이력 확인, 메모 작성, 주문 조회</td></tr>
+                  <tr><td>슈퍼 관리자</td><td>시스템 전체 관리, 설정 변경 권한</td><td>사용자 관리, 권한 설정, 시스템 설정, 전체 대시보드, 엑셀 다운로드</td></tr>
+                  <tr><td>CS 관리자</td><td>CS 팀 리더, 상담사 관리</td><td>상담사 퍼포먼스 조회, 상담 배정, 통계 대시보드, 통합 상담 이력 조회</td></tr>
+                  <tr><td>CS 상담사</td><td>고객 응대 담당자</td><td>고객 조회, 상담 이력 확인, 메모 작성, 주문 조회, 알림톡 발송</td></tr>
                 </tbody>
               </table>
 
@@ -476,16 +463,18 @@
                 <li><strong>[필수]</strong> 하우저 API 연동을 통한 실시간 주문 데이터 조회</li>
                 <li><strong>[필수]</strong> 배송 상태 실시간 추적 (배송 준비 → 출고 → 배송 중 → 배송 완료)</li>
                 <li><strong>[필수]</strong> 고객별 주문 이력 통합 조회</li>
+                <li><strong>[필수]</strong> 배송 D-Day 카운트다운 표시 (참고 이미지 반영)</li>
                 <li><strong>[선택]</strong> 주문 상태 변경 시 알림</li>
               </ul>
 
               <h3>3.2 고객 상담 이력 관리 (채널톡 연동)</h3>
               <ul>
                 <li><strong>[필수]</strong> 채널톡 Open API 연동을 통한 상담 내역 동기화</li>
-                <li><strong>[필수]</strong> 고객별 상담 이력 타임라인 조회</li>
+                <li><strong>[필수]</strong> 고객별 상담 이력 타임라인 조회 (참고 이미지의 타임라인 UI 반영)</li>
                 <li><strong>[필수]</strong> CS 담당자 상담 메모 작성 및 관리</li>
                 <li><strong>[필수]</strong> 채널톡 웹훅을 통한 실시간 상담 알림 수신</li>
-                <li><strong>[선택]</strong> 상담 태그/카테고리 분류</li>
+                <li><strong>[필수]</strong> 상담 분류 색상 코딩 — 불만/클레임(빨강), 일반문의(초록), 상담중(노랑) (참고 이미지 반영)</li>
+                <li><strong>[선택]</strong> 고객에게 상담 결과 알림톡(SMS) 발송 (참고 이미지 반영)</li>
               </ul>
 
               <h3>3.3 관리자 및 사용자 관리</h3>
@@ -496,12 +485,13 @@
                 <li><strong>[선택]</strong> 비밀번호 초기화, 로그인 이력 관리</li>
               </ul>
 
-              <h3>3.4 CRM 대시보드</h3>
+              <h3>3.4 CRM 대시보드 및 통계</h3>
               <ul>
-                <li><strong>[필수]</strong> 고객 360도 뷰 (상담 이력 + 주문 정보 통합)</li>
-                <li><strong>[필수]</strong> 상담사 퍼포먼스 지표 (응대 건수, 평균 처리 시간)</li>
-                <li><strong>[선택]</strong> 일별/주별/월별 통계 차트</li>
-                <li><strong>[선택]</strong> 고객 검색 및 필터링</li>
+                <li><strong>[필수]</strong> 상담사별 퍼포먼스 통계 (응대 건수, 처리 시간, 상태별 분류)</li>
+                <li><strong>[필수]</strong> 통합 상담 이력 조회 — 날짜, 상태, 채널, 담당자 필터링 (참고 이미지 반영)</li>
+                <li><strong>[필수]</strong> 고객 통합 검색 (이름, 연락처, 주문번호, 배송지)</li>
+                <li><strong>[선택]</strong> VIP 고객 태깅 및 특이사항 경고 표시 (참고 이미지 반영)</li>
+                <li><strong>[선택]</strong> 상담 이력 엑셀 다운로드 (참고 이미지 반영)</li>
               </ul>
 
               <h2>4. 비기능 요구사항</h2>
@@ -510,30 +500,28 @@
                   <tr><th>항목</th><th>요구사항</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>성능</td><td>API 응답 시간 500ms 이내, 페이지 로드 3초 이내</td></tr>
-                  <tr><td>보안</td><td>HTTPS, JWT 인증, RBAC 권한 관리 (CASL), SQL Injection 방어</td></tr>
-                  <tr><td>가용성</td><td>99.5% 이상 (일반 SLA 기준)</td></tr>
-                  <tr><td>호환성</td><td>Chrome, Edge, Safari 최신 2개 버전 지원</td></tr>
-                  <tr><td>동시 사용자</td><td>20명 동시 접속 지원</td></tr>
+                  <tr><td>성능</td><td>API 응답 시간 500ms 이내, 10~20명 동시 접속 안정 지원</td></tr>
+                  <tr><td>보안</td><td>HTTPS, JWT 인증, RBAC 접근 제어, SQL Injection 방어</td></tr>
+                  <tr><td>가용성</td><td>SLA 99.5%, 자동 백업 (일 1회)</td></tr>
+                  <tr><td>브라우저</td><td>Chrome, Edge 최신 2개 버전 지원</td></tr>
+                  <tr><td>반응형</td><td>PC Web 기준 (태블릿 대응은 선택)</td></tr>
                 </tbody>
               </table>
 
               <h2>5. 기술 제약사항</h2>
               <ul>
-                <li>채널톡 Open API 호출 제한(Rate Limit)에 따른 폴링 간격 조정 필요</li>
-                <li>하우저 API 문서 및 접근 권한은 클라이언트로부터 제공받아야 함</li>
-                <li>PC Web 기반 — 최신 브라우저 필수 (IE 미지원)</li>
-                <li>서버 인프라는 클라이언트와 협의 후 결정 (AWS 권장)</li>
+                <li>채널톡 Open API 사양에 따른 호출 제한(Rate Limit) 준수</li>
+                <li>하우저 API 제공 범위에 따른 조회 데이터 범위 결정 (킥오프 미팅 시 확인)</li>
+                <li>PC Web 기준 개발 — 웹 브라우저 기반 제안 (배포·유지보수 효율성)</li>
               </ul>
 
               <h2>6. 범위 외 사항 (Out of Scope)</h2>
               <ul>
-                <li>모바일 앱 개발 (PC Web 전용)</li>
-                <li>채널톡 내 챗봇 개발 또는 자동 응답 시스템</li>
-                <li>하우저 이외의 배송업체 연동</li>
-                <li>결제 시스템 연동</li>
-                <li>AI 기반 자동 상담 분류/응답 추천</li>
-                <li>대규모 트래픽(100명 이상) 대응을 위한 인프라 확장</li>
+                <li>모바일 앱 개발</li>
+                <li>채널톡 자체 기능 커스터마이징</li>
+                <li>하우저 시스템 내부 수정</li>
+                <li>기존 고객 데이터 이관 (별도 협의)</li>
+                <li>다국어 지원</li>
               </ul>
             </article>
           </div>
@@ -580,7 +568,7 @@
                 <p class="text-sm font-semibold tracking-[0.14em] text-sky-700">PHASE 2</p>
                 <h4 class="text-base font-semibold text-slate-900">UI/UX 디자인</h4>
                 <p class="mb-1 text-xs font-semibold text-amber-600">Day 12–27</p>
-                <p class="text-sm leading-7 text-slate-600">디자인 시스템 구축, 주요 화면 UI 디자인, 반응형 레이아웃 설계, 프로토타입 검수</p>
+                <p class="text-sm leading-7 text-slate-600">디자인 시스템 구축, 주요 화면 UI 디자인(12~15화면), 참고 이미지 기반 레이아웃 패턴 적용, 프로토타입 검수</p>
                 <ul class="mt-2 list-disc pl-5 text-sm text-slate-500">
                   <li>산출물: Figma 디자인 원본 파일, 디자인 시스템 가이드</li>
                 </ul>
@@ -589,7 +577,7 @@
                 <p class="text-sm font-semibold tracking-[0.14em] text-sky-700">PHASE 3</p>
                 <h4 class="text-base font-semibold text-slate-900">백엔드 개발 + API 연동</h4>
                 <p class="mb-1 text-xs font-semibold text-amber-600">Day 20–58</p>
-                <p class="text-sm leading-7 text-slate-600">NestJS 10 백엔드 구축, 채널톡 API 연동(상담 이력 동기화, 웹훅), 하우저 API 연동(주문/배송 조회), 사용자 인증 및 CASL 기반 RBAC, MySQL 8 DB 구성</p>
+                <p class="text-sm leading-7 text-slate-600">NestJS 10 백엔드 구축, 채널톡 API 연동(상담 이력 동기화, 웹훅, 알림톡), 하우저 API 연동(주문/배송 조회, D-Day), 사용자 인증 및 CASL 기반 RBAC, MySQL 8 DB 구성</p>
                 <ul class="mt-2 list-disc pl-5 text-sm text-slate-500">
                   <li>산출물: REST API 서버, DB 마이그레이션, 연동 테스트 보고서</li>
                 </ul>
@@ -598,16 +586,16 @@
                 <p class="text-sm font-semibold tracking-[0.14em] text-sky-700">PHASE 4</p>
                 <h4 class="text-base font-semibold text-slate-900">프론트엔드 개발</h4>
                 <p class="mb-1 text-xs font-semibold text-amber-600">Day 27–72</p>
-                <p class="text-sm leading-7 text-slate-600">Next.js 14 + MUI v5 기반 CRM 대시보드, 고객 상담 이력 뷰, 주문/배송 조회 화면, 상담 메모 에디터, 관리자 패널</p>
+                <p class="text-sm leading-7 text-slate-600">Next.js 14 + MUI v5 기반 CRM 대시보드, 고객 상담 이력 타임라인 뷰, 주문/배송 조회 화면, 상담 메모 에디터, 통합 검색, VIP 태깅, 관리자 패널</p>
                 <ul class="mt-2 list-disc pl-5 text-sm text-slate-500">
-                  <li>산출물: CRM 웹 애플리케이션 (10~15 주요 화면)</li>
+                  <li>산출물: CRM 웹 애플리케이션 (12~15 주요 화면)</li>
                 </ul>
               </div>
               <div class="timeline-item">
                 <p class="text-sm font-semibold tracking-[0.14em] text-sky-700">PHASE 5</p>
                 <h4 class="text-base font-semibold text-slate-900">QA 및 배포</h4>
                 <p class="mb-1 text-xs font-semibold text-amber-600">Day 73–90</p>
-                <p class="text-sm leading-7 text-slate-600">통합 테스트, 연동 검증, 버그 수정, 운영 서버 배포, 사용자 가이드 제공, 인수인계</p>
+                <p class="text-sm leading-7 text-slate-600">통합 테스트, 채널톡/하우저 연동 검증, 버그 수정, 운영 서버 배포, 사용자 가이드 제공, 인수인계</p>
                 <ul class="mt-2 list-disc pl-5 text-sm text-slate-500">
                   <li>산출물: 테스트 결과서, 배포 가이드, 소스 코드 이관</li>
                 </ul>
@@ -644,7 +632,7 @@
         </div>
 
         <!-- ═══════════════════════════════════════════════ -->
-        <!-- PAGE: 포트폴리오 (Portfolio)                     -->
+        <!-- PAGE: 유사 프로젝트 경험 (Portfolio)             -->
         <!-- ═══════════════════════════════════════════════ -->
         <div id="page-portfolio" class="page-section space-y-6">
           <div class="rounded-2xl border border-slate-200/70 bg-white/95 p-5 shadow-soft backdrop-blur md:p-8">
@@ -654,132 +642,140 @@
             </article>
           </div>
 
-          <!-- Stats row -->
           <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
             <div class="rounded-2xl border border-slate-200/70 bg-white/90 p-4 text-center shadow-soft backdrop-blur">
-              <p class="text-2xl font-bold text-sky-700">10+</p>
-              <p class="mt-1 text-xs text-slate-500">완료 프로젝트</p>
+              <p class="text-2xl font-bold text-sky-700">13+</p>
+              <p class="text-xs text-slate-500">완료 프로젝트</p>
             </div>
             <div class="rounded-2xl border border-slate-200/70 bg-white/90 p-4 text-center shadow-soft backdrop-blur">
-              <p class="text-2xl font-bold text-sky-700">2,100+</p>
-              <p class="mt-1 text-xs text-slate-500">총 PR 수</p>
+              <p class="text-2xl font-bold text-sky-700">504</p>
+              <p class="text-xs text-slate-500">EZ-Approve PR</p>
             </div>
             <div class="rounded-2xl border border-slate-200/70 bg-white/90 p-4 text-center shadow-soft backdrop-blur">
-              <p class="text-2xl font-bold text-sky-700">100+</p>
-              <p class="mt-1 text-xs text-slate-500">구축 페이지</p>
+              <p class="text-2xl font-bold text-sky-700">12+</p>
+              <p class="text-xs text-slate-500">외부 API 연동 경험</p>
             </div>
             <div class="rounded-2xl border border-slate-200/70 bg-white/90 p-4 text-center shadow-soft backdrop-blur">
-              <p class="text-2xl font-bold text-sky-700">B2B</p>
-              <p class="mt-1 text-xs text-slate-500">SaaS 전문</p>
+              <p class="text-2xl font-bold text-sky-700">7종</p>
+              <p class="text-xs text-slate-500">RBAC 역할 관리</p>
             </div>
           </div>
 
-          <!-- Portfolio cards -->
           <div class="space-y-4">
             <!-- EZ-Approve -->
             <div class="rounded-2xl border border-slate-200/70 bg-white/90 p-5 shadow-soft backdrop-blur md:p-8">
-              <div class="mb-3 inline-flex rounded-full border px-2.5 py-1 text-sm font-semibold tracking-[0.12em] bg-sky-100 text-sky-700 border-sky-200">B2B SaaS · 전자결재</div>
-              <h3 class="text-lg font-semibold tracking-tight text-slate-900">EZ-Approve (전자결재 · 업무 관리 올인원 플랫폼)</h3>
-              <p class="mt-1 text-xs text-slate-400">B2B SaaS · 2026.01~2026.03 (9주) · 504 PR · 2,764 파일</p>
+              <div class="mb-3 inline-flex rounded-full border px-2.5 py-1 text-sm font-semibold tracking-[0.12em] bg-sky-100 text-sky-700 border-sky-200">B2B SaaS · 매칭 9/10</div>
+              <h3 class="text-lg font-semibold tracking-tight text-slate-900">EZ-Approve</h3>
+              <p class="mt-1 text-xs text-slate-400">전자결재 · 업무 관리 올인원 플랫폼 · 2026.01~03 (9주)</p>
               <div class="mt-3 doc-content">
                 <h4>프로젝트 개요</h4>
-                <p>한국 기업의 분산된 결재·문서관리 프로세스를 통합하는 B2B SaaS 플랫폼. 엔터프라이즈 수준의 전자결재를 단일 대시보드에서 관리하고, 토큰 기반 셀프서비스 포털에서 외부 이해관계자의 등록·신청·총회 참석을 처리합니다. 50+ 페이지, 34 엔티티, 120~150 API 엔드포인트 규모입니다.</p>
+                <p>B2B SaaS 전자결재 플랫폼으로, 기업 내 결재/승인 프로세스를 디지털화합니다. 504건의 PR을 9주 만에 완료하며, 50+ 페이지, 120-150 API 엔드포인트를 구현했습니다.</p>
                 <h4>핵심 기능</h4>
                 <ul>
-                  <li>엔터프라이즈급 결재 엔진 — 8종 결재 행위(상신·합의·전결·선결·후결·대결)</li>
-                  <li>RBAC 기반 7종 사용자 역할 관리 + CASL 권한 제어</li>
-                  <li>12개 외부 서비스 연동 (Firebase FCM, Ppurio SMS, NICE 본인인증, Gmail SMTP 등)</li>
-                  <li>170파일 Lexical 편집기 (26 커스텀 노드, 40+ 플러그인, Yjs 실시간 협업)</li>
-                  <li>6계층 보안 아키텍처 (JWT + 2FA + IP 화이트리스트 + Brute Force 방지 + Rate Limiting + Helmet)</li>
-                  <li>AI 증강 개발 — Google Jules, Copilot, Bolt 활용</li>
+                  <li>RBAC 7종 역할 관리 + CASL 기반 접근 제어 + 6계층 보안</li>
+                  <li>12개 외부 서비스 API 연동 (결제, 인증, 알림, SMS 등)</li>
+                  <li>다단계 전자결재 엔진 (8종 결재 액션)</li>
+                  <li>Lexical 리치 에디터 (170파일, 26 커스텀 노드, Yjs 실시간 공동 편집)</li>
+                  <li>토큰 기반 외부 셀프서비스 포탈</li>
                 </ul>
                 <h4>본 프로젝트와의 유사점</h4>
-                <p>B2B 관리자 대시보드 구조, RBAC 7종 역할 관리, 12개 외부 API 연동 패턴이 CS CRM 시스템과 직접 연결됩니다. 특히 다종 사용자 역할 관리와 실시간 데이터 조회 대시보드 구축 경험이 본 프로젝트에 바로 활용 가능합니다.</p>
+                <ul>
+                  <li><strong>RBAC 7종 → CRM 3종 역할</strong>: 슈퍼관리자·CS관리자·CS상담사 권한 구조에 직접 재활용</li>
+                  <li><strong>12개 외부 API 연동 패턴</strong>: 채널톡/하우저 API 연동에 동일한 인터페이스 어댑터 패턴 적용</li>
+                  <li><strong>B2B 관리자 대시보드 아키텍처</strong>: CRM 대시보드 레이아웃, 필터, 테이블 컴포넌트 재활용</li>
+                  <li><strong>NestJS 10 + Next.js 13 + MUI v5 + TypeORM 동일 스택</strong></li>
+                </ul>
                 <h4>기술 스택</h4>
                 <div class="flex flex-wrap gap-1.5 not-prose">
-                  <span class="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-sm text-slate-500">Next.js 13</span>
                   <span class="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-sm text-slate-500">NestJS 10</span>
+                  <span class="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-sm text-slate-500">Next.js 13</span>
                   <span class="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-sm text-slate-500">TypeORM</span>
                   <span class="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-sm text-slate-500">MySQL 8</span>
-                  <span class="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-sm text-slate-500">CASL (RBAC)</span>
                   <span class="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-sm text-slate-500">MUI v5</span>
+                  <span class="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-sm text-slate-500">CASL</span>
                   <span class="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-sm text-slate-500">Docker</span>
-                  <span class="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-sm text-slate-500">Lexical + Yjs</span>
+                  <span class="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-sm text-slate-500">Firebase FCM</span>
                 </div>
               </div>
             </div>
 
             <!-- Harmony Link -->
             <div class="rounded-2xl border border-slate-200/70 bg-white/90 p-5 shadow-soft backdrop-blur md:p-8">
-              <div class="mb-3 inline-flex rounded-full border px-2.5 py-1 text-sm font-semibold tracking-[0.12em] bg-sky-100 text-sky-700 border-sky-200">B2B SaaS · 통합 관리</div>
-              <h3 class="text-lg font-semibold tracking-tight text-slate-900">Harmony Link (노인 주간보호센터 통합 관리 플랫폼)</h3>
-              <p class="mt-1 text-xs text-slate-400">멀티플랫폼 관리 시스템 · 2025 (~6개월) · 133K+ LOC · 6개 플랫폼</p>
+              <div class="mb-3 inline-flex rounded-full border px-2.5 py-1 text-sm font-semibold tracking-[0.12em] bg-sky-100 text-sky-700 border-sky-200">B2B SaaS · 매칭 8/10</div>
+              <h3 class="text-lg font-semibold tracking-tight text-slate-900">Harmony Link</h3>
+              <p class="mt-1 text-xs text-slate-400">시니어 주간보호 통합 관리 플랫폼 · 2025 (6개월)</p>
               <div class="mt-3 doc-content">
                 <h4>프로젝트 개요</h4>
-                <p>노인 주간보호센터의 돌봄 기록, 투약 관리, 보호자 소통, AI 건강분석을 하나로 통합한 멀티플랫폼 관리 시스템. 6개 플랫폼(Android, iOS, Web, macOS, Windows, Linux)을 지원하며 140+ API 엔드포인트, 90개 DB 마이그레이션, 2,532개 다국어 키를 갖추었습니다.</p>
+                <p>노인 주간보호센터의 돌봄 기록, 투약 관리, 보호자 커뮤니케이션을 통합하는 멀티플랫폼 시스템입니다. 133,000+ LOC, 140+ API 엔드포인트, 6개 플랫폼을 지원합니다.</p>
                 <h4>핵심 기능</h4>
                 <ul>
-                  <li>이용자(고객) 이력 관리 — 보호일지, 식단, 사진앨범, 일정, 출석 디지털화</li>
-                  <li>실시간 푸시 알림 시스템 (Firebase FCM) + 보호자 소통</li>
-                  <li>RBAC 6개 역할 기반 권한 관리 + CASL</li>
-                  <li>관리자 웹 패널 (Next.js 13 + MUI)</li>
-                  <li>외부 서비스 연동 (Firebase Auth/FCM/Crashlytics, OpenAI API)</li>
-                  <li>AWS CDK 기반 완전 자동화 인프라 + 8개 CI/CD 워크플로우</li>
+                  <li>이용자(고객) 이력 통합 관리 — 돌봄 기록, 식단, 스케줄, 출결</li>
+                  <li>실시간 푸시 알림 (Firebase FCM) + 보호자 초대 코드</li>
+                  <li>RBAC 6종 역할 관리 + CASL 접근 제어</li>
+                  <li>AI 건강 분석 (OpenAI 연동)</li>
+                  <li>전자서명 기반 투약 확인</li>
                 </ul>
                 <h4>본 프로젝트와의 유사점</h4>
-                <p>고객(이용자) 이력 통합 관리, 실시간 알림, 다수 사용자 역할 관리가 CS CRM 시스템의 상담 이력 관리 및 사용자 권한 체계와 직접 유사합니다. 외부 API 연동(Firebase, OpenAI) 경험도 채널톡/하우저 연동에 활용 가능합니다.</p>
+                <ul>
+                  <li><strong>이용자 이력 통합 관리</strong>: 상담 이력 + 주문 이력 통합 뷰와 직접 유사한 패턴</li>
+                  <li><strong>실시간 알림(FCM)</strong>: 채널톡 웹훅 실시간 알림 수신 패턴과 유사</li>
+                  <li><strong>CASL RBAC</strong>: 동일한 권한 관리 라이브러리 사용</li>
+                  <li><strong>NestJS + Next.js + TypeORM 동일 스택</strong></li>
+                </ul>
                 <h4>기술 스택</h4>
                 <div class="flex flex-wrap gap-1.5 not-prose">
-                  <span class="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-sm text-slate-500">Next.js 13</span>
                   <span class="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-sm text-slate-500">NestJS 10</span>
-                  <span class="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-sm text-slate-500">Flutter 3.35</span>
+                  <span class="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-sm text-slate-500">Next.js 13</span>
+                  <span class="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-sm text-slate-500">Flutter</span>
                   <span class="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-sm text-slate-500">TypeORM</span>
                   <span class="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-sm text-slate-500">MySQL 8</span>
                   <span class="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-sm text-slate-500">AWS CDK</span>
                   <span class="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-sm text-slate-500">Firebase</span>
+                  <span class="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-sm text-slate-500">OpenAI</span>
                 </div>
               </div>
             </div>
 
             <!-- Series B -->
             <div class="rounded-2xl border border-slate-200/70 bg-white/90 p-5 shadow-soft backdrop-blur md:p-8">
-              <div class="mb-3 inline-flex rounded-full border px-2.5 py-1 text-sm font-semibold tracking-[0.12em] bg-sky-100 text-sky-700 border-sky-200">B2B SaaS · 핀테크</div>
-              <h3 class="text-lg font-semibold tracking-tight text-slate-900">Series B (투자조합 관리 · 업무 자동화 올인원 플랫폼)</h3>
-              <p class="mt-1 text-xs text-slate-400">올인원 관리 플랫폼 · 2023.11~2024.12 (14개월) · 1,652 PR · 80+ 엔티티</p>
+              <div class="mb-3 inline-flex rounded-full border px-2.5 py-1 text-sm font-semibold tracking-[0.12em] bg-sky-100 text-sky-700 border-sky-200">핀테크 · 매칭 7/10</div>
+              <h3 class="text-lg font-semibold tracking-tight text-slate-900">Series B</h3>
+              <p class="mt-1 text-xs text-slate-400">VC 펀드 관리 · 업무 자동화 플랫폼 · 2023.11~2024.12 (14개월)</p>
               <div class="mt-3 doc-content">
                 <h4>프로젝트 개요</h4>
-                <p>한국 벤처캐피탈(VC) 업계에서 투자조합 관리, 전자결재, 규제 보고가 파편화된 문제를 해결하기 위한 올인원 SaaS 플랫폼. GP(운용사)는 결재·펀드관리·회계·VICS 규제보고를 단일 시스템에서 처리하고, LP(출자자)는 전용 대시보드로 펀드 현황을 실시간 조회합니다. 50+ 페이지, 80+ 엔티티, 179개 DB 마이그레이션, 22개 백엔드 도메인 모듈 규모입니다.</p>
+                <p>VC 투자조합 관리 올인원 SaaS 플랫폼입니다. 1,652건의 PR, 50+ 페이지, 22개 백엔드 도메인 모듈, 80+ 엔티티, 200-300+ API 엔드포인트를 구현했습니다.</p>
                 <h4>핵심 기능</h4>
                 <ul>
-                  <li>AI 투자심사보고서 자동 생성 (ChatGPT API 연동)</li>
-                  <li>GP/LP 펀드 라이프사이클 관리 — 펀드 등록~출자금~투자실행~성과보고</li>
-                  <li>한국형 전자결재 엔진 (합의·대결·선결·전결·부재위임)</li>
-                  <li>VICS 규제 보고 자동화 — 5종 양식 + SFTP 자동 제출</li>
-                  <li>실시간 공동 편집 (Lexical + CRDT)</li>
-                  <li>5중 보안 아키텍처 (JWT + 2FA + NICE 본인인증 + IP 화이트리스트 + GeoIP)</li>
+                  <li>80+ 엔티티 규모 대규모 DB 모델링, 179개 마이그레이션</li>
+                  <li>다중 API 연동 (Firebase, SMS, NICE KYC, ChatGPT, Document AI)</li>
+                  <li>AI 투자 보고서 생성 (ChatGPT)</li>
+                  <li>5계층 보안 (JWT + 2FA + NICE + IP 화이트리스트 + GeoIP)</li>
+                  <li>실시간 공동 편집 (Lexical + CRDT/Yjs)</li>
                 </ul>
                 <h4>본 프로젝트와의 유사점</h4>
-                <p>대규모 데이터 통합 조회 대시보드(80+ 엔티티), 다중 외부 API 연동(Firebase, SMS, NICE, ChatGPT) 경험이 CRM의 고객 360도 뷰 구축에 직접 활용 가능합니다. 179개 마이그레이션 규모의 복잡한 데이터 모델링 경험은 안정적인 DB 설계를 보장합니다.</p>
+                <ul>
+                  <li><strong>대규모 DB 모델링</strong>: 80+ 엔티티 경험으로 CRM DB 스키마의 안정적 설계 보장</li>
+                  <li><strong>다중 외부 API 연동</strong>: 다양한 외부 시스템 통합 역량 증명</li>
+                  <li><strong>179개 마이그레이션</strong>: 지속적 스키마 진화 관리 역량</li>
+                </ul>
                 <h4>기술 스택</h4>
                 <div class="flex flex-wrap gap-1.5 not-prose">
-                  <span class="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-sm text-slate-500">Next.js 13</span>
                   <span class="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-sm text-slate-500">NestJS 10</span>
+                  <span class="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-sm text-slate-500">Next.js 13</span>
                   <span class="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-sm text-slate-500">TypeORM</span>
                   <span class="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-sm text-slate-500">MySQL</span>
-                  <span class="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-sm text-slate-500">MUI v5</span>
-                  <span class="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-sm text-slate-500">Docker</span>
+                  <span class="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-sm text-slate-500">Lexical</span>
+                  <span class="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-sm text-slate-500">Yjs</span>
                   <span class="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-sm text-slate-500">AWS</span>
-                  <span class="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-sm text-slate-500">Lexical + Yjs</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- CTA -->
           <div class="rounded-2xl border border-sky-200/70 bg-gradient-to-br from-sky-50 to-brand-50 p-6 text-center shadow-soft md:p-10">
             <h2 class="text-xl font-bold tracking-tight text-slate-900 md:text-2xl">함께 만들어 가겠습니다</h2>
             <p class="mx-auto mt-3 max-w-lg text-sm leading-7 text-slate-600">프로젝트에 대해 더 자세한 논의를 원하시면 미팅을 신청해 주세요.</p>
-            <a href="https://www.wishket.com/partners/p/blueverse1/" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.wishket.com/partners/p/blueverse1/portfolio/" target="_blank" rel="noopener noreferrer"
                class="mt-5 inline-flex items-center gap-2 rounded-full border border-sky-300 bg-white px-5 py-2 text-sm font-semibold text-sky-700 shadow-sm transition hover:-translate-y-0.5 hover:border-sky-400 hover:shadow-soft">
               위시켓에서 Blue Verse 보기 <span aria-hidden="true">&rarr;</span>
             </a>
