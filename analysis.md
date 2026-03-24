@@ -146,7 +146,7 @@ job:
   4. 기획~디자인~개발~배포 올인원 수행 (디자인 인력 미보유 해결)
   5. 참고 이미지 분석 기반 추가 기능 반영 (VIP 태깅, SMS 알림, 엑셀 다운로드, D-Day, 상담 분류 색상 코딩)
   6. 유사 프로젝트 코드 재활용으로 효율적 개발 진행
-- **제안서 사이트**: https://proposal-cs-crm.pages.dev/
+- **제안서 사이트**: https://proposal-router.claude-ai-b27.workers.dev/proposal-cs-crm/
 
 ## 6. Step 8 최종 산출물 (위시켓 폼 텍스트)
 
@@ -180,7 +180,7 @@ EZ-Approve 프로젝트에서 B2B SaaS 관리자 CRM을 직접 설계·개발한
 안녕하세요, CS 고객 관리용 CRM 시스템 구축 프로젝트에 지원합니다.
 
 본 프로젝트에 대한 상세 제안서(견적서, 공수계산서, PRD, 일정, 포트폴리오)를 별도 페이지로 준비하였습니다. 아래 링크에서 확인해 주시면 감사하겠습니다.
-▶ 제안서 상세 페이지: https://proposal-cs-crm.pages.dev/
+▶ 제안서 상세 페이지: https://proposal-router.claude-ai-b27.workers.dev/proposal-cs-crm/
 ▶ 위시켓 포트폴리오: https://www.wishket.com/partners/p/blueverse1/
 
 ---
